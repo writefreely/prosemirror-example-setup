@@ -28,10 +28,10 @@ function insertImageItem(nodeType) {
       openPrompt({
         title: "Insert image",
         fields: {
-          src: new TextField({label: "Location", required: true, value: attrs && attrs.src}),
-          title: new TextField({label: "Title", value: attrs && attrs.title}),
-          alt: new TextField({label: "Description",
-                              value: attrs ? attrs.alt : state.doc.textBetween(from, to, " ")})
+          src: new TextField({label: "Image URL", required: true, value: attrs && attrs.src}),
+          alt: new TextField({label: "Description (alt text)",
+                              value: attrs ? attrs.alt : state.doc.textBetween(from, to, " ")}),
+          title: new TextField({label: "Title (optional)", value: attrs && attrs.title})
         },
         callback(attrs) {
           view.dispatch(view.state.tr.replaceSelectionWith(nodeType.createAndFill(attrs)))
@@ -84,7 +84,7 @@ function linkItem(markType) {
         title: "Create a link",
         fields: {
           href: new TextField({
-            label: "Link target",
+            label: "URL",
             required: true
           }),
           title: new TextField({label: "Title"})
