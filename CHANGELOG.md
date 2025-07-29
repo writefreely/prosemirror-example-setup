@@ -1,3 +1,27 @@
+## 1.2.3 (2024-08-16)
+
+### Bug fixes
+
+Make the type of the `fullMenu` option `MenuElement[][]` instead of `MenuItem[][]`.
+
+## 1.2.2 (2023-05-17)
+
+### Bug fixes
+
+Include CommonJS type declarations in the package to please new TypeScript resolution settings.
+
+## 1.2.1 (2022-06-22)
+
+### Bug fixes
+
+Export CSS file from package.json.
+
+## 1.2.0 (2022-05-30)
+
+### New features
+
+Include TypeScript type declarations.
+
 ## 1.1.2 (2019-11-20)
 
 ### Bug fixes
